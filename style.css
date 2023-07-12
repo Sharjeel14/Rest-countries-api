@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700;800&display=swap');
+
+:root {
+    --blue: hsl(210, 22%, 22%);
+    --DarkBlue: hsl(209, 23%, 22%);
+    --VeryDarkBlue: hsl(207, 26%, 17%);
+    --VeryDarkBlue2: hsl(200, 15%, 8%);
+    --DarkGray: hsl(0, 0%, 52%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    transition: all 150ms ease;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 10%;
+    height: 60px;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: var(--White);
+    transition: all 150ms ease;
+}
+
+.navbar .title h3 {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.navbar .mode {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar .mode i {
+    margin: 0px 7px 0 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.navbar .mode p {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.section-2 {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 88%;
+    margin: 0 auto;
+}
+
+.section-2 .search-prompt {
+    background: transparent;
+    margin: 0;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 500px;
+    padding: 15px 4px 16px 90px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background: transparent url("search.png") no-repeat 35px center;
+    background-size: 20px;
+    transition: all 150ms ease;
+}
+
+.section-2 .search-prompt::placeholder {
+    color: black;
+    /* Placeholder color */
+}
+
+.select {
+    position: relative;
+    min-width: 200px;
+}
+
+.select svg {
+    position: absolute;
+    right: 12px;
+    top: calc(50% - 3px);
+    width: 10px;
+    height: 6px;
+    stroke-width: 2px;
+    stroke: #9098a9;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    pointer-events: none;
+}
+
+.section-2 .select select {
+    -webkit-appearance: none;
+    padding: 12px 40px 12px 12px;
+    width: 100%;
+    border: 1px solid #e8eaed;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    transition: all 150ms ease;
+}
+
+
+.section-2 .select select option[value=""][disabled] {
+    display: none;
+}
+
+.section-2 .select select:focus {
+    outline: none;
+    box-shadow: 0 1px 3px -2px #9098a9;
+}
+
+.section-2 .sprites {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+.section-3 {
+    width: 100%;
+}
+
+.section-3 ul {
+    width: 88%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+
+.section-3 ul li {
+    list-style: none;
+    flex-basis: calc(25% - 40px);
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+.section-3 ul li img {
+    width: 100%;
+    height: 200px;
+}
+
+.section-3 ul li h3,
+.section-3 ul li p {
+    padding-left: 5px;
+}
+
+/* Dark modes styles */
+.dark-mode {
+    color: white;
+    background-color: var(--blue);
+
+}
+
+.section-2 .search-prompt-mode {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background: var(--blue) url("search1.png") no-repeat 35px center;
+    background-size: 20px;
+}
+
+.section-2 .search-prompt-mode::placeholder {
+    color: var(--White);
+}
+
+.section-2 .select .myselect {
+    color: white;
+    border: 1px solid var(--blue);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background: var(--blue);
+}
+
+.body-color {
+    background-color: var(--VeryDarkBlue);
+}
+
+
+
+@media screen and (max-width:1000px) {
+    .section-3 ul li img {
+        width: 240px;
+        height: 200px;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .section-2 {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+        width: 90%;
+    }
+
+    .section-2 .search-prompt {
+        margin: 30px 0 40px;
+    }
+
+    .section-2 .search-prompt {
+        width: 100%;
+    }
+}

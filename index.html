@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="section-1">
+            <nav class="navbar" id="my-nav">
+                <div class="title">
+                    <h3>Where in the World?</h3>
+                </div>
+                <div class="mode">
+                    <i class="fa-regular fa-moon"></i>
+                    <p>
+                        Dark Mode
+                    </p>
+                </div>
+            </nav>
+        </div>
+        <div class="section-2">
+            <input class="search-prompt" type="search" placeholder="Search for country" name="search-flag">
+            <label class="select" for="slct">
+                <select id="slct" required="required">
+                    <!-- <option value="" disabled="disabled" selected="selected">Filter by Region</option>
+                    <option value="#">One</option>
+                    <option value="#">Two</option>
+                    <option value="#">Three</option>
+                    <option value="#">Four</option>
+                    <option value="#">Five</option>
+                    <option value="#">Six</option>
+                    <option value="#">Seven</option> -->
+                </select>
+                <svg>
+                    <use xlink:href="#select-arrow-down"></use>
+                </svg>
+            </label>
+            <!-- SVG Sprites-->
+            <svg class="sprites">
+                <symbol id="select-arrow-down" viewbox="0 0 10 6">
+                    <polyline points="1 1 5 5 9 1"></polyline>
+                </symbol>
+            </svg>
+        </div>
+        <div class="section-3">
+            <ul id="country-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
