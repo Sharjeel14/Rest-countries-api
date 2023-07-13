@@ -21,7 +21,7 @@
     overflow-x: hidden;
     width: 100vw;
     height: 100vh;
-    transition: all 150ms ease;
+    transition: all 300ms ease;
 }
 
 .navbar {
@@ -34,7 +34,7 @@
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     background-color: var(--White);
-    transition: all 150ms ease;
+    transition: all 300ms ease;
 }
 
 .navbar .title h3 {
@@ -80,7 +80,7 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background: transparent url("search.png") no-repeat 35px center;
     background-size: 20px;
-    transition: all 150ms ease;
+    transition: all 300ms ease;
 }
 
 .section-2 .search-prompt::placeholder {
@@ -118,7 +118,7 @@
     cursor: pointer;
     font-family: inherit;
     font-size: 16px;
-    transition: all 150ms ease;
+    transition: all 300ms ease;
 }
 
 
@@ -143,25 +143,49 @@
     width: 100%;
 }
 
+.section-3 .country-details {
+    padding: 15px;
+}
+
+.section-3 .country-details h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.section-3 .myspans1 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.section-3 .myspans2 {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--DarkGray);
+}
+
 .section-3 ul {
     width: 88%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 0 auto;
 }
 
 
 .section-3 ul li {
+    cursor: pointer;
+    height: 380px;
     list-style: none;
     flex-basis: calc(25% - 40px);
-    margin: 15px;
+    margin: 10px 15px;
     border-radius: 5px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: all 300ms ease;
 
 }
 
 .section-3 ul li img {
+    border-radius: 5px 5px 0 0;
     width: 100%;
     height: 200px;
 }
@@ -179,6 +203,7 @@
 }
 
 .section-2 .search-prompt-mode {
+    color: white;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     background: var(--blue) url("search1.png") no-repeat 35px center;
     background-size: 20px;
@@ -199,7 +224,18 @@
     background-color: var(--VeryDarkBlue);
 }
 
+.section-3 .country-details-dark {
+    color: white;
+}
 
+.section-3 .myspans-dark {
+    color: var(--VeryLightGray);
+}
+
+.section-3 ul .dark-li {
+    background-color: var(--blue);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
 
 @media screen and (max-width:1000px) {
     .section-3 ul li img {
@@ -223,5 +259,15 @@
 
     .section-2 .search-prompt {
         width: 100%;
+    }
+
+    .section-2 .select select {
+        margin-bottom: 30px;
+    }
+
+    .select svg {
+
+        top: calc(33% - 3px);
+
     }
 }
