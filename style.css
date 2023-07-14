@@ -29,7 +29,7 @@
     justify-content: space-between;
     margin: 0 auto;
     width: 100%;
-    padding: 0 10%;
+    padding: 0 6%;
     height: 60px;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -128,7 +128,7 @@
 
 .section-2 .select select:focus {
     outline: none;
-    box-shadow: 0 1px 3px -2px #9098a9;
+    /* box-shadow: 0 1px 3px -2px #9098a9; */
 }
 
 .section-2 .sprites {
@@ -152,11 +152,13 @@
     margin-bottom: 15px;
 }
 
+.section-4 .myspans1,
 .section-3 .myspans1 {
     font-size: 15px;
     font-weight: 500;
 }
 
+.section-4 .myspans2,
 .section-3 .myspans2 {
     font-size: 14px;
     font-weight: 300;
@@ -195,6 +197,92 @@
     padding-left: 5px;
 }
 
+
+.section-4 {
+    display: none;
+}
+
+.section-4 {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.back {
+    height: 150px;
+    display: none;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.back button,
+.section-4 .borders-country button {
+    width: 100px;
+    height: 35px;
+    border: 1px solid #e8eaed;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    transition: all 300ms ease;
+    margin-left: 10px;
+}
+
+.section-4 .borders-country button {
+    margin-top: 5px;
+}
+
+.section-4 button i {
+    margin-left: 10px;
+}
+
+.section-4 .myspans2 {
+    font-weight: 300;
+    color: black;
+}
+
+.section-4 .country-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-4 .country-item .country-details {
+    width: 50%;
+    margin-top: 40px;
+}
+
+.section-4 .country-item .country-details .title {
+    margin-bottom: 20px;
+}
+
+
+
+.section-4 .country-item .country-details .details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.section-4 .country-item .borders-country {
+    width: 100%;
+    margin-top: 40px;
+
+}
+
+.section-4 li {
+    list-style: none;
+}
+
+.section-4 li img {
+    width: 40%;
+    border-radius: 5px;
+    height: 350px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
 /* Dark modes styles */
 .dark-mode {
     color: white;
@@ -213,12 +301,15 @@
     color: var(--White);
 }
 
+.back .myselect,
+.section-4 .borders-country .dark-li,
 .section-2 .select .myselect {
     color: white;
     border: 1px solid var(--blue);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     background: var(--blue);
 }
+
 
 .body-color {
     background-color: var(--VeryDarkBlue);
@@ -228,8 +319,17 @@
     color: white;
 }
 
-.section-3 .myspans-dark {
+/* .section-3 .myspans-dark {
     color: var(--VeryLightGray);
+} */
+
+.section-4 .country-item .country-details .myspans-dark {
+    color: var(--VeryLightGray);
+    font-weight: 300;
+}
+
+.section-4 .country-item .country-details-dark {
+    color: white;
 }
 
 .section-3 ul .dark-li {
@@ -242,7 +342,10 @@
         width: 240px;
         height: 200px;
     }
+
+
 }
+
 
 
 @media screen and (max-width:768px) {
@@ -269,5 +372,90 @@
 
         top: calc(33% - 3px);
 
+    }
+
+    .section-4 .country-item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .section-4 li img {
+        width: 60%;
+        height: auto;
+
+    }
+
+    .section-4 .country-item .country-details {
+        width: auto;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .section-4 li img {
+        width: 90%;
+
+    }
+
+    .section-4 .country-item .country-details {
+        width: 90%;
+    }
+
+    .section-4 .country-item .country-details .details {
+        flex-direction: column;
+    }
+
+    .navbar .title h3 {
+        font-size: 16px;
+    }
+
+    .section-4 .country-domains {
+        margin-top: 30px;
+    }
+
+    .section-4 .borders-country button {
+        margin: 1%;
+        width: 31%;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .section-4 li img {
+        width: 95%;
+
+    }
+
+    .section-4 .country-item .country-details {
+        width: 95%;
+    }
+
+    .section-3 ul li img {
+        width: 100%;
+    }
+
+    .section-3 ul li {
+        flex-basis: 100%;
+    }
+
+    .navbar {
+        padding: 0 3%;
+    }
+
+    .section-4 .borders-country .myspans1 {
+        display: block;
+    }
+
+
+
+
+}
+
+@media screen and (min-width:1300px) {
+    .section-4 .country-item .country-details .details {
+        width: 85%;
     }
 }
