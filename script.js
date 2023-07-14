@@ -19,6 +19,7 @@ backBtn.addEventListener('click', () => {
     section3.style.display = 'flex'
     const parentElement = document.getElementById('my-section');
     parentElement.innerHTML = ''
+    backDiv.style.display = 'none'
 })
 
 
