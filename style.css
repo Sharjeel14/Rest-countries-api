@@ -246,12 +246,13 @@
 
 .section-4 .country-item {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .section-4 .country-item .country-details {
     width: 50%;
     margin-top: 40px;
+    margin-left: 50px;
 }
 
 .section-4 .country-item .country-details .title {
@@ -277,7 +278,8 @@
 }
 
 .section-4 li img {
-    width: 40%;
+    width: 50%;
+    /* width: 440px; */
     border-radius: 5px;
     height: 350px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -389,7 +391,7 @@
 
     .section-4 .country-item .country-details {
         width: auto;
-        margin-top: 40px;
+        margin-left: 0px;
     }
 }
 
