@@ -18,3 +18,6 @@ Your users should be able to:
 - Toggle the color scheme between light and dark mode
 
 **⚠️ NOTE ⚠️: Sometimes the REST Countries API can go down. We've added a `data.json` file with all the country data if you prefer to use that instead. However, please be aware that the data in the JSON file might not be up-to-date.**
+
+SCreenShots:
+![Alt text](/design/desktop-preview.jpg?raw=true "Optional Title")
